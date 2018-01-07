@@ -1,25 +1,25 @@
-# /etc/conf.d/dashd: config file for /etc/init.d/dashd
+# /etc/conf.d/grootd: config file for /etc/init.d/grootd
 
 # Config file location
-#BITCOIND_CONFIGFILE="/etc/dashcore/dash.conf"
+#BITCOIND_CONFIGFILE="/etc/grootcore/groot.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
-#BITCOIND_PIDDIR="/var/run/dashd"
+#BITCOIND_PIDDIR="/var/run/grootd"
 
 # What filename to give the pidfile
-#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/dashd.pid"
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/grootd.pid"
 
-# Where to write dashd data (be mindful that the blockchain is large)
-#BITCOIND_DATADIR="/var/lib/dashd"
+# Where to write grootd data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/grootd"
 
-# User and group to own dashd process
-#BITCOIND_USER="dashcore"
-#BITCOIND_GROUP="dashcore"
+# User and group to own grootd process
+#BITCOIND_USER="grootcore"
+#BITCOIND_GROUP="grootcore"
 
-# Path to dashd executable
-#BITCOIND_BIN="/usr/bin/dashd"
+# Path to grootd executable
+#BITCOIND_BIN="/usr/bin/grootd"
 
-# Nice value to run dashd under
+# Nice value to run grootd under
 #BITCOIND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)

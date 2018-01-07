@@ -1,3 +1,3 @@
-debian/manpages/dashd.1
-debian/manpages/dash.conf.5
-debian/manpages/dash-cli.1
+debian/manpages/grootd.1
+debian/manpages/groot.conf.5
+debian/manpages/groot-cli.1

@@ -1,36 +1,36 @@
 #!/bin/bash
 #
-#  dashd The Dash Core server.
+#  grootd The Dash Core server.
 #
 #
 # chkconfig: 345 80 20
-# description: dashd
-# processname: dashd
+# description: grootd
+# processname: grootd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/dashd, see below
-if [ -f /etc/sysconfig/dashd ]; then
-        . /etc/sysconfig/dashd
+# you can override defaults in /etc/sysconfig/grootd, see below
+if [ -f /etc/sysconfig/grootd ]; then
+        . /etc/sysconfig/grootd
 fi
 
 RETVAL=0
 
-prog=dashd
-# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/dashd
-lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/dashd}
+prog=grootd
+# you can override the lockfile via BITCOIND_LOCKFILE in /etc/sysconfig/grootd
+lockfile=${BITCOIND_LOCKFILE-/var/lock/subsys/grootd}
 
-# dashd defaults to /usr/bin/dashd, override with BITCOIND_BIN
-dashd=${BITCOIND_BIN-/usr/bin/dashd}
+# grootd defaults to /usr/bin/grootd, override with BITCOIND_BIN
+grootd=${BITCOIND_BIN-/usr/bin/grootd}
 
-# dashd opts default to -disablewallet, override with BITCOIND_OPTS
-dashd_opts=${BITCOIND_OPTS--disablewallet}
+# grootd opts default to -disablewallet, override with BITCOIND_OPTS
+grootd_opts=${BITCOIND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $dashd $dashd_opts
+    daemon $DAEMONOPTS $grootd $grootd_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile
